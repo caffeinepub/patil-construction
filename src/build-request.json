@@ -1,0 +1,57 @@
+{
+  "kind": "build_request",
+  "title": "Replace site logo with latest uploaded PATIL Construction 3D logo",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-18",
+      "text": "Generate a new square logo image from the latest uploaded PATIL Construction 3D logo wall mockup (use \"patil construction 3d jpeg new-7.jpg\" as the source): tightly crop to the logo mark, remove the wall/background, and export a transparent PNG at 512x512 into frontend/public/assets/generated.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-Replace"
+        ],
+        "quotes": [
+          "Replace"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A new transparent PNG logo asset exists at frontend/public/assets/generated/patil-logo-3d-new7.dim_512x512.png with dimensions 512x512.",
+        "The exported logo is tightly cropped to the logo mark with no visible wall/mockup background."
+      ]
+    },
+    {
+      "id": "REQ-19",
+      "text": "Update the website header and footer to use the newly generated logo asset \"/assets/generated/patil-logo-3d-new7.dim_512x512.png\" anywhere the current logo is rendered (replacing the current \"/assets/generated/patil-logo-3d-new5.dim_512x512.png\").",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-Replace"
+        ],
+        "quotes": [
+          "Replace"
+        ]
+      },
+      "acceptanceCriteria": [
+        "SiteHeader renders the logo from /assets/generated/patil-logo-3d-new7.dim_512x512.png.",
+        "SiteFooter renders the logo from /assets/generated/patil-logo-3d-new7.dim_512x512.png.",
+        "Logo remains visually balanced and not clipped across mobile and desktop breakpoints (current sizing behavior preserved: h-12 w-auto object-contain)."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not edit files under frontend/src/components/ui or any paths listed as immutable in SYSTEM_CONTEXT.",
+    "Serve images as static assets from frontend/public/assets/generated (do not route images through the backend).",
+    "Keep all backend code in the single Motoko actor (no backend changes needed for this request)."
+  ],
+  "nonGoals": [
+    "Changing any site copy, layout structure, navigation, or service content beyond updating the logo asset references.",
+    "Adding backend persistence, APIs, or authentication changes."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Square-cropped logo mark with transparent background derived from patil construction 3d jpeg new-7.jpg (patil-logo-3d-new7.dim_512x512.png)"
+    ],
+    "edits": []
+  }
+}

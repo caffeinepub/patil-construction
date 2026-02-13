@@ -1,0 +1,14 @@
+{
+  "frontend/src/App.tsx": "Main application component that composes the site structure with header, hero, services, about, contact sections, and footer in a single-page layout.",
+  "frontend/src/components/SiteHeader.tsx": "Sticky header component with the updated square 3D PATIL Construction logo (new-7 variant), company name, tagline, and responsive navigation that smoothly scrolls to page sections.",
+  "frontend/src/components/Sections/HeroSection.tsx": "Hero section displaying the company name as H1, tagline, intro copy, hero banner image, and call-to-action buttons.",
+  "frontend/src/components/Sections/ServicesSection.tsx": "Services section with a grid of six service cards (Real Estate Services, civil engineering, 3D elevation, Vastu, interior, construction), each with an icon, title, and description, with fallback icon handling for unmapped service IDs.",
+  "frontend/src/components/Sections/AboutSection.tsx": "About section with company description, key highlights with checkmarks, and a visual stats card showing years of excellence.",
+  "frontend/src/components/Sections/ContactSection.tsx": "Contact section with inquiry form (name, phone, message), client-side validation, success state, contact information cards, and business hours.",
+  "frontend/src/components/SiteFooter.tsx": "Footer component with the updated square 3D PATIL Construction logo (new-7 variant), company info, quick navigation links, dynamically rendered services list from siteCopy, copyright notice, and Caffeine.ai attribution with UTM tracking.",
+  "frontend/src/content/siteCopy.ts": "Centralized content file containing all website copy including hero intro, about description, and detailed descriptions for all six services with Real Estate Services now appearing first in the list.",
+  "frontend/src/index.css": "Global styles with construction-themed OKLCH color system using warm earth tones and safety orange accents for both light and dark modes.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with construction-appropriate design tokens, custom shadows, and Inter font family.",
+  "frontend/index.html": "HTML entry point with proper meta tags including SEO-optimized title and description for PATIL Construction.",
+  "frontend/src/hooks/useQueries.ts": "Placeholder hooks file for React Query integration (minimal as backend has no methods and contact form is client-side only)."
+}

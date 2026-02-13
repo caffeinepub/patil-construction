@@ -1,0 +1,22 @@
+{
+  "backend/main.mo": "Empty Motoko actor placeholder with no logic.",
+  "feature_evidence.json": "Feature evidence report describing two features: generating a new logo and updating header/footer references.",
+  "frontend-file-summaries.txt": "High-level descriptions of all frontend components, content files, and config files.",
+  "frontend/index.css": "Tailwind base and theme variables defining light/dark OKLCH color system and global styles.",
+  "frontend/index.html": "HTML entry point loading the React app with SEO meta tags.",
+  "frontend/src/App.tsx": "Main React component composing header, sections, and footer into a single-page layout.",
+  "frontend/src/components/Sections/AboutSection.tsx": "About section showing company description, highlights, and a visual stats card.",
+  "frontend/src/components/Sections/ContactSection.tsx": "Contact form with validation, contact info, business hours, and submission state handling.",
+  "frontend/src/components/Sections/HeroSection.tsx": "Hero banner with background image, intro text, and buttons that scroll to sections.",
+  "frontend/src/components/Sections/ServicesSection.tsx": "Grid of service cards using mapped icons and content from siteCopy.",
+  "frontend/src/components/SiteFooter.tsx": "Footer with new logo, navigation links, services list, and attribution link.",
+  "frontend/src/components/SiteHeader.tsx": "Responsive header component with logo, desktop nav buttons, and a mobile sheet menu that scrolls to page sections.",
+  "frontend/src/content/siteCopy.ts": "Static marketing copy defining hero text, about description, and detailed service descriptions for the site.",
+  "frontend/src/hooks/useActor.ts": "Hook that creates and manages a backend actor based on the current Internet Identity and refreshes dependent queries.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Authentication context and provider for managing Internet Identity login, logout, and identity loading.",
+  "frontend/src/hooks/useQueries.ts": "Placeholder hook returning an empty query set since no backend queries are needed.",
+  "frontend/src/index.css": "Tailwind base styles with custom OKLCH color variables and construction-themed light/dark palettes.",
+  "frontend/src/main.tsx": "App entry point that mounts React, sets up React Query, and wraps the app with the Internet Identity provider.",
+  "frontend/tailwind.config.js": "Tailwind configuration with custom fonts, colors, container settings, animations, and plugin integrations.",
+  "project_state.json": "Metadata file describing project state, requirements, features, notes, and image needs for the PATIL Construction site."
+}

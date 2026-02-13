@@ -1,0 +1,202 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 15,
+  "summary": "Website/content project for PATIL Construction (civil engineering & building contractors) with tagline and service-focused pages/sections: Civil engineer, 3D elevation, Vastu consulting, Interior design, Residential & commercial construction, plus a new “Real Estate Services” section (to appear first in the Services list).",
+  "architectural_notes": [
+    "User confirmed the uploaded logo should be cropped/converted into a clean square logo (i.e., “make square”) before being used on the site, rather than replacing the main logo as-is.",
+    "User requested to replace the current site logo with the latest uploaded logo image (not explicitly requesting a new square-cropped/transparent version)."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Square-cropped logo mark with transparent background derived from patil construction 3d jpeg new-7.jpg (patil-logo-3d-new7.dim_512x512.png)",
+  "existing_features": [
+    {
+      "id": "feature-build-a-responsive-marketing-website-frontend-for-patil-construction-with-the-tagline-your-vision-our-precision-and-clear-sections-for-the-provided-services-civil-engineering-3d-elevation-vastu-consulting-interior-and-residential-commercial-construction",
+      "title": "Build a responsive marketing website frontend for “PATIL Construction” with the tagline “Your vision, our precision” and clear sections for the provided services: Civil engineering, 3D elevation, Vastu consulting, Interior, and Residential & commercial construction.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-concise-professional-english-website-copy-for-patil-construction-a-short-hero-intro-a-brief-about-description-and-one-paragraph-descriptions-for-each-of-the-five-services-based-strictly-on-the-user-provided-keywords",
+      "title": "Create concise, professional English website copy for PATIL Construction: a short hero intro, a brief “About” description, and one-paragraph descriptions for each of the five services based strictly on the user-provided keywords.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-simple-site-structure-navigation-suitable-for-a-small-business-website-e-g-top-navigation-with-anchor-links-or-routes-covering-home-services-about-and-contact-sections",
+      "title": "Add a simple site structure/navigation suitable for a small business website (e.g., top navigation with anchor links or routes) covering: Home, Services, About, and Contact sections.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-contact-section-with-a-basic-inquiry-form-ui-name-phone-message-that-validates-required-fields-on-the-client-and-shows-a-clear-success-state-after-submission-no-backend-persistence-required-unless-explicitly-added-later",
+      "title": "Implement a Contact section with a basic inquiry form UI (name, phone, message) that validates required fields on the client and shows a clear success state after submission (no backend persistence required unless explicitly added later).",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-cohesive-visual-theme-appropriate-for-a-construction-civil-engineering-brand-distinct-color-palette-typography-spacing-and-section-styling-and-use-it-consistently-across-the-site-avoid-blue-purple-as-the-primary-palette",
+      "title": "Apply a cohesive visual theme appropriate for a construction/civil engineering brand (distinct color palette, typography, spacing, and section styling) and use it consistently across the site (avoid blue/purple as the primary palette).",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-basic-seo-and-accessibility-essentials-page-title-meta-description-semantic-headings-and-accessible-form-labels",
+      "title": "Add basic SEO and accessibility essentials: page title, meta description, semantic headings, and accessible form labels.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-generate-and-include-custom-static-image-assets-for-the-website-logo-and-a-hero-banner-and-render-them-from-frontend-public-assets-generated-do-not-serve-images-via-backend",
+      "title": "Generate and include custom static image assets for the website (logo and a hero banner) and render them from frontend/public/assets/generated (do not serve images via backend).",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-use-the-user-uploaded-logo-image-patil-constructio-new-final-png-as-the-website-logo-by-updating-the-static-asset-at-assets-generated-patil-logo-dim-512x512-png-ensuring-it-renders-correctly-anywhere-the-logo-is-used-at-minimum-in-the-site-header-and-footer",
+      "title": "Use the user-uploaded logo image (\"patil constructio new final.png\") as the website logo by updating the static asset at /assets/generated/patil-logo.dim_512x512.png, ensuring it renders correctly anywhere the logo is used (at minimum in the site header and footer).",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-new-service-entry-titled-real-estate-services-to-the-website-services-content-and-ensure-it-appears-as-the-first-item-in-the-services-list",
+      "title": "Add a new service entry titled \"Real Estate Services\" to the website services content, and ensure it appears as the first item in the Services list.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-services-section-to-render-an-icon-for-the-new-real-estate-services-item-and-prevent-runtime-errors-if-a-service-id-does-not-have-a-mapped-icon",
+      "title": "Update the Services section to render an icon for the new Real Estate Services item and prevent runtime errors if a service id does not have a mapped icon.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-footer-our-services-list-so-it-includes-the-new-real-estate-services-entry-and-stays-consistent-with-the-services-shown-in-the-services-section-including-order-with-real-estate-services-first",
+      "title": "Update the footer \"Our Services\" list so it includes the new \"Real Estate Services\" entry and stays consistent with the services shown in the Services section (including order, with Real Estate Services first).",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-new-website-logo-asset-from-the-user-uploaded-image-patil-construction-3d-jpeg-new-3-jpg-and-add-it-to-the-static-generated-assets-folder-so-it-can-be-used-in-the-ui",
+      "title": "Create a new website logo asset from the user-uploaded image \"patil construction 3d jpeg new-3.jpg\" and add it to the static generated assets folder so it can be used in the UI.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-site-header-and-footer-to-use-the-new-logo-asset-and-adjust-the-logo-placement-so-it-is-visually-balanced-and-responsive-no-clipping-consistent-sizing-alignment-across-breakpoints",
+      "title": "Update the site header and footer to use the new logo asset and adjust the logo placement so it is visually balanced and responsive (no clipping, consistent sizing/alignment across breakpoints).",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-new-square-logo-asset-derived-from-the-uploaded-image-patil-construction-3d-jpeg-new-4-jpg-and-save-it-as-a-static-generated-image-under-frontend-public-assets-generated",
+      "title": "Create a new square logo asset derived from the uploaded image \"patil construction 3d jpeg new-4.jpg\" and save it as a static generated image under frontend/public/assets/generated.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-site-header-and-footer-to-use-the-new-logo-asset-file-instead-of-the-current-assets-generated-patil-logo-3d-dim-512x512-png",
+      "title": "Update the site header and footer to use the new logo asset file instead of the current /assets/generated/patil-logo-3d.dim_512x512.png.",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-generate-a-new-square-logo-image-derived-from-the-user-uploaded-file-patil-construction-3d-jpeg-new-5-jpg-by-tightly-cropping-to-the-logo-mark-removing-the-wall-background-and-exporting-a-transparent-png-at-512x512-into-frontend-public-assets-generated",
+      "title": "Generate a new square logo image derived from the user-uploaded file \"patil construction 3d jpeg new-5.jpg\" by tightly cropping to the logo mark, removing the wall/background, and exporting a transparent PNG at 512x512 into frontend/public/assets/generated.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-website-to-use-the-newly-generated-square-logo-asset-patil-logo-3d-new5-dim-512x512-png-anywhere-the-current-logo-is-rendered-specifically-replacing-references-to-assets-generated-patil-logo-3d-new4-dim-512x512-png-in-both-the-site-header-and-footer",
+      "title": "Update the website to use the newly generated square logo asset (patil-logo-3d-new5.dim_512x512.png) anywhere the current logo is rendered, specifically replacing references to /assets/generated/patil-logo-3d-new4.dim_512x512.png in both the site header and footer.",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-generate-a-new-square-logo-image-from-the-latest-uploaded-patil-construction-3d-logo-wall-mockup-use-patil-construction-3d-jpeg-new-7-jpg-as-the-source-tightly-crop-to-the-logo-mark-remove-the-wall-background-and-export-a-transparent-png-at-512x512-into-frontend-public-assets-generated",
+      "title": "Generate a new square logo image from the latest uploaded PATIL Construction 3D logo wall mockup (use \"patil construction 3d jpeg new-7.jpg\" as the source): tightly crop to the logo mark, remove the wall/background, and export a transparent PNG at 512x512 into frontend/public/assets/generated.",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-website-header-and-footer-to-use-the-newly-generated-logo-asset-assets-generated-patil-logo-3d-new7-dim-512x512-png-anywhere-the-current-logo-is-rendered-replacing-the-current-assets-generated-patil-logo-3d-new5-dim-512x512-png",
+      "title": "Update the website header and footer to use the newly generated logo asset \"/assets/generated/patil-logo-3d-new7.dim_512x512.png\" anywhere the current logo is rendered (replacing the current \"/assets/generated/patil-logo-3d-new5.dim_512x512.png\").",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create website content structure and copy for PATIL Construction, using tagline \"Your vision, our precision\" and highlighting services (Civil engineering, 3D elevation, Vastu consulting, Interior design, residential & commercial construction).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Add the PATIL Construction logo to the website UI (e.g., in the header/hero) so it appears on the live site.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Add a new “Real Estate Services” section to the website and place it at the top of the Services list (appears first).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Adjust/improve the PATIL Construction logo placement in the website layout (e.g., header/hero) based on the deployed draft.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Replace the current website logo with the latest uploaded PATIL Construction 3D logo image (user requested \"Replace\").",
+      "reqIds": [],
+      "status": "in_progress"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "PATIL Construction",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

@@ -1,0 +1,40 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-generate-a-new-square-logo-image-from-the-latest-uploaded-patil-construction-3d-logo-wall-mockup-use-patil-construction-3d-jpeg-new-7-jpg-as-the-source-tightly-crop-to-the-logo-mark-remove-the-wall-background-and-export-a-transparent-png-at-512x512-into-frontend-public-assets-generated",
+      "featureTitle": "Generate a new square logo image from the latest uploaded PATIL Construction 3D logo wall mockup (use \"patil construction 3d jpeg new-7.jpg\" as the source): tightly crop to the logo mark, remove the wall/background, and export a transparent PNG at 512x512 into frontend/public/assets/generated.",
+      "files": [],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-18"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-the-website-header-and-footer-to-use-the-newly-generated-logo-asset-assets-generated-patil-logo-3d-new7-dim-512x512-png-anywhere-the-current-logo-is-rendered-replacing-the-current-assets-generated-patil-logo-3d-new5-dim-512x512-png",
+      "featureTitle": "Update the website header and footer to use the newly generated logo asset \"/assets/generated/patil-logo-3d-new7.dim_512x512.png\" anywhere the current logo is rendered (replacing the current \"/assets/generated/patil-logo-3d-new5.dim_512x512.png\").",
+      "files": [
+        "frontend/src/components/SiteFooter.tsx",
+        "frontend/src/components/SiteHeader.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-19"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
