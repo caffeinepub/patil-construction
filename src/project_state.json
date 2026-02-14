@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 23,
+  "projectStateVersion": 25,
   "summary": "Website/content project for PATIL Construction (civil engineering & building contractors) with tagline and service-focused pages/sections: Civil engineer, 3D elevation, Vastu consulting, Interior design, Residential & commercial construction, plus a new “Real Estate Services” section (to appear first in the Services list).",
   "architectural_notes": [
     "User requested to replace the current site logo with the latest uploaded logo image (not explicitly requesting a new square-cropped/transparent version).",
@@ -185,6 +185,14 @@
       "title": "Retry the full project build and deployment, and fix any build-time errors that prevent successful completion (TypeScript compile errors, missing imports, missing static assets, or invalid paths).",
       "reqIds": [
         "REQ-22"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-and-publish-deploy-the-current-patil-construction-website-version-to-production-ensuring-the-deployment-completes-successfully-without-build-time-errors-typescript-compile-errors-missing-imports-missing-static-assets-or-invalid-paths",
+      "title": "Build and publish (deploy) the current PATIL Construction website version to production, ensuring the deployment completes successfully without build-time errors (TypeScript compile errors, missing imports, missing static assets, or invalid paths).",
+      "reqIds": [
+        "REQ-23"
       ],
       "version": 1
     }

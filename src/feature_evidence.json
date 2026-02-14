@@ -1,4 +1,24 @@
 {
   "kind": "feature_evidence_report",
-  "features": []
+  "features": [
+    {
+      "featureId": "feature-build-and-publish-deploy-the-current-patil-construction-website-version-to-production-ensuring-the-deployment-completes-successfully-without-build-time-errors-typescript-compile-errors-missing-imports-missing-static-assets-or-invalid-paths",
+      "featureTitle": "Build and publish (deploy) the current PATIL Construction website version to production, ensuring the deployment completes successfully without build-time errors (TypeScript compile errors, missing imports, missing static assets, or invalid paths).",
+      "files": [
+        "frontend/src/components/SiteFooter.tsx",
+        "frontend/src/components/SiteHeader.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-23"
+      ],
+      "confidence": "high"
+    }
+  ]
 }

@@ -1,6 +1,39 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Retry build/deployment (no new feature changes requested)",
-  "requirements": []
+  "title": "Publish PATIL Construction website (frontend build/deploy readiness)",
+  "requirements": [
+    {
+      "id": "REQ-23",
+      "summary": "Ensure the current PATIL Construction site builds cleanly and all referenced static assets resolve in production.",
+      "acceptanceCriteria": [
+        "A production deployment is completed successfully for the current codebase.",
+        "The build completes with no TypeScript compilation errors.",
+        "All referenced static assets resolve at runtime (no 404s for /assets/generated/*).",
+        "The deployed site loads and renders the main sections (Header, Hero, Services, About, Contact, Footer) without runtime errors."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/SiteHeader.tsx",
+          "operation": "modify",
+          "description": "Update the header logo image reference to use a stable generated asset path (served from the public assets folder) so production builds don’t fail or 404 due to missing/space-containing filenames. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/SiteFooter.tsx",
+          "operation": "modify",
+          "description": "Update the footer logo image reference to use the same stable generated asset path as the header to prevent runtime 404s in production. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/public/assets/generated/patil-hero.dim_1920x800.png",
+          "operation": "create",
+          "description": "Add the generated hero image as a static public asset at this exact path so the Hero section’s /assets/generated/* reference resolves in production (copy from the provided asset: generated/patil-hero.dim_1920x800.png)."
+        },
+        {
+          "path": "frontend/public/assets/generated/patil-logo.dim_512x512.png",
+          "operation": "create",
+          "description": "Add the generated logo image as a static public asset at this exact path so Header/Footer logo references resolve in production (copy from the provided asset: generated/patil-logo.dim_512x512.png)."
+        }
+      ]
+    }
+  ]
 }

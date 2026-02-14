@@ -1,40 +1,44 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-14T12:37:08.162Z",
-  "summary": "BuildRequest asked only to retry build/deployment with no feature/content/layout changes. The diff modifies SiteHeader and SiteFooter UI/behavior and updates project documentation/state files, which constitutes unrequested changes under the stated constraints.",
-  "missing_requirements": [],
+  "generatedAt": "2026-02-14T12:47:35.230Z",
+  "summary": "Diff updates the SiteHeader and SiteFooter components, including navigation behavior and footer content, and references a stable generated asset path for the logo. However, the diff does not provide evidence that a production build/deploy was actually executed successfully or that all runtime asset 404s/build errors are resolved across the site.",
+  "missing_requirements": [
+    {
+      "id": "REQ-23",
+      "requirement": "Build and publish (deploy) the current PATIL Construction website version to production, ensuring the deployment completes successfully without build-time errors (TypeScript compile errors, missing imports, missing static assets, or invalid paths).",
+      "reason": "The diff only shows component code/content changes; it contains no evidence of an actual production deployment, build pipeline updates, or verification that TypeScript compilation is error-free and all referenced assets resolve at runtime across the app.",
+      "evidence": [
+        "frontend/src/components/SiteHeader.tsx",
+        "frontend/src/components/SiteFooter.tsx",
+        "frontend-file-summaries.txt"
+      ]
+    }
+  ],
   "hallucinated_features": [
     {
-      "description": "Changed SiteHeader to include logo image, company name/tagline rendering, and responsive navigation with smooth-scroll behavior and a mobile Sheet menu.",
-      "reason": "BuildRequest explicitly requests no new feature changes and no changes to layout/navigation/copy; only a build/deployment retry.",
-      "evidence": [
-        "frontend/src/components/SiteHeader.tsx"
-      ]
-    },
-    {
-      "description": "Changed SiteFooter content/layout to include logo, company copy, quick links with smooth-scroll behavior, dynamic services list rendering, and a Caffeine.ai attribution link with UTM tracking.",
-      "reason": "BuildRequest explicitly requests no website copy/layout/navigation changes and no new features; only a build/deployment retry.",
+      "description": "Added/changed footer content to include a 'Built with … using caffeine.ai' attribution link with UTM tracking based on hostname.",
+      "reason": "REQ-23 focuses on build/deploy success and resolving build/runtime errors; this marketing attribution/tracking content is not requested and conflicts with the stated non-goal of no content changes beyond what is required to build/publish.",
       "evidence": [
         "frontend/src/components/SiteFooter.tsx"
       ]
     },
     {
-      "description": "Introduced/updated a generated documentation summary of frontend files describing features and copy.",
-      "reason": "Not requested; request is only to retry build/deployment without feature/content changes.",
+      "description": "Footer now renders an 'Our Services' list dynamically from siteCopy and adds 'Quick Links' buttons that smooth-scroll to sections.",
+      "reason": "Not requested by REQ-23; these are feature/content additions rather than explicit build/deploy fixes based on the provided diff summary.",
       "evidence": [
-        "frontend-file-summaries.txt"
+        "frontend/src/components/SiteFooter.tsx"
       ]
     },
     {
-      "description": "Updated project_state.json summary/features list (project state/version).",
-      "reason": "Not requested; request is only to retry build/deployment without feature/content changes.",
+      "description": "Header navigation implemented/changed to use responsive Sheet-based mobile menu with smooth scrolling section navigation buttons.",
+      "reason": "Not requested by REQ-23; appears as a UX/navigation change beyond the stated deployment/build objective.",
       "evidence": [
-        "project_state.json"
+        "frontend/src/components/SiteHeader.tsx"
       ]
     }
   ],
-  "confidence": 0.78,
+  "confidence": 0.68,
   "changed_files": [
     "frontend-file-summaries.txt",
     "frontend/src/components/SiteFooter.tsx",

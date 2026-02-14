@@ -1,10 +1,11 @@
 # Specification
 
 ## Summary
-**Goal:** Retry the build/deployment to resolve the prior configuration/build failure without changing any existing features or UI.
+**Goal:** Deploy the current PATIL Construction website to production successfully.
 
 **Planned changes:**
-- Fix build/deployment configuration or compilation issues causing the current failure.
-- Keep frontend immutable paths unchanged and keep the backend as a single Motoko actor (add `backend/migration.mo` only if required for stable state upgrade).
+- Run a production build and fix any build-time blockers (TypeScript compile errors, missing imports, invalid paths).
+- Verify all referenced static assets resolve correctly at runtime (including `/assets/generated/*`) and fix any broken references as needed.
+- Ensure the deployed site renders core sections (Header, Hero, Services, About, Contact, Footer) without runtime errors.
 
-**User-visible outcome:** The application deploys successfully with no user-facing changes to features, copy, layout, navigation, contact form behavior, theme, or images.
+**User-visible outcome:** The live production site deploys successfully and loads the main sections without build/runtime errors or missing-asset 404s.

@@ -26,7 +26,7 @@ export function SiteHeader() {
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-3">
           <img
-            src="/assets/patil constructio new final.png"
+            src="/assets/generated/patil-logo.dim_512x512.png"
             alt="PATIL Construction Logo"
             className="h-12 w-auto object-contain"
           />
