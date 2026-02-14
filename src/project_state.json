@@ -1,14 +1,16 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 15,
+  "projectStateVersion": 23,
   "summary": "Website/content project for PATIL Construction (civil engineering & building contractors) with tagline and service-focused pages/sections: Civil engineer, 3D elevation, Vastu consulting, Interior design, Residential & commercial construction, plus a new “Real Estate Services” section (to appear first in the Services list).",
   "architectural_notes": [
-    "User confirmed the uploaded logo should be cropped/converted into a clean square logo (i.e., “make square”) before being used on the site, rather than replacing the main logo as-is.",
-    "User requested to replace the current site logo with the latest uploaded logo image (not explicitly requesting a new square-cropped/transparent version)."
+    "User requested to replace the current site logo with the latest uploaded logo image (not explicitly requesting a new square-cropped/transparent version).",
+    "User confirmed the latest uploaded logo should be used exactly as uploaded (no cropping, no square conversion, no transparent background)."
   ],
-  "known_issues": [],
-  "isFixRequest": false,
-  "imageRequirements": "## Required Images\n- Square-cropped logo mark with transparent background derived from patil construction 3d jpeg new-7.jpg (patil-logo-3d-new7.dim_512x512.png)",
+  "known_issues": [
+    "Deployment/build failing intermittently (user requested rebuild after deployment failure).",
+    "Build failing due to a configuration problem (\"A configuration problem occurred\" / needs Caffeine team)."
+  ],
+  "isFixRequest": true,
   "existing_features": [
     {
       "id": "feature-build-a-responsive-marketing-website-frontend-for-patil-construction-with-the-tagline-your-vision-our-precision-and-clear-sections-for-the-provided-services-civil-engineering-3d-elevation-vastu-consulting-interior-and-residential-commercial-construction",
@@ -159,6 +161,30 @@
       "title": "Update the website header and footer to use the newly generated logo asset \"/assets/generated/patil-logo-3d-new7.dim_512x512.png\" anywhere the current logo is rendered (replacing the current \"/assets/generated/patil-logo-3d-new5.dim_512x512.png\").",
       "reqIds": [
         "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-newly-uploaded-logo-image-screenshot-20260214-164840-png-to-the-static-generated-assets-folder-and-keep-it-visually-identical-to-the-upload-no-cropping-no-background-removal-no-transparency-edits",
+      "title": "Add the newly uploaded logo image (\"Screenshot_20260214-164840.png\") to the static generated assets folder and keep it visually identical to the upload (no cropping, no background removal, no transparency edits).",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-website-header-and-footer-to-use-the-newly-added-uploaded-logo-asset-for-the-logo-image-replacing-current-references-to-assets-generated-patil-logo-3d-new7-dim-512x512-png",
+      "title": "Update the website header and footer to use the newly added uploaded-logo asset for the logo image (replacing current references to \"/assets/generated/patil-logo-3d-new7.dim_512x512.png\").",
+      "reqIds": [
+        "REQ-21"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-retry-the-full-project-build-and-deployment-and-fix-any-build-time-errors-that-prevent-successful-completion-typescript-compile-errors-missing-imports-missing-static-assets-or-invalid-paths",
+      "title": "Retry the full project build and deployment, and fix any build-time errors that prevent successful completion (TypeScript compile errors, missing imports, missing static assets, or invalid paths).",
+      "reqIds": [
+        "REQ-22"
       ],
       "version": 1
     }

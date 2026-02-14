@@ -1,43 +1,6 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Update PATIL Construction site logo to latest 3D mockup (new-7)",
-  "requirements": [
-    {
-      "id": "REQ-18",
-      "summary": "Generate a new square transparent PNG logo (512x512) tightly cropped from the latest uploaded PATIL Construction 3D logo wall mockup (new-7).",
-      "acceptanceCriteria": [
-        "A new transparent PNG logo asset exists at frontend/public/assets/generated/patil-logo-3d-new7.dim_512x512.png with dimensions 512x512.",
-        "The exported logo is tightly cropped to the logo mark with no visible wall/mockup background."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/public/assets/generated/patil-logo-3d-new7.dim_512x512.png",
-          "operation": "create",
-          "description": "Create the transparent 512x512 PNG logo derived from the source image (patil construction 3d jpeg new-7.jpg): remove wall/background and tightly crop to the logo mark, then place it at this exact path to be served as a static asset."
-        }
-      ]
-    },
-    {
-      "id": "REQ-19",
-      "summary": "Replace header and footer logo references to use the newly generated patil-logo-3d-new7 asset while preserving current sizing behavior.",
-      "acceptanceCriteria": [
-        "SiteHeader renders the logo from /assets/generated/patil-logo-3d-new7.dim_512x512.png.",
-        "SiteFooter renders the logo from /assets/generated/patil-logo-3d-new7.dim_512x512.png.",
-        "Logo remains visually balanced and not clipped across mobile and desktop breakpoints (current sizing behavior preserved: h-12 w-auto object-contain)."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/SiteHeader.tsx",
-          "operation": "modify",
-          "description": "Update the header logo <img> src to use /assets/generated/patil-logo-3d-new7.dim_512x512.png instead of /assets/generated/patil-logo-3d-new5.dim_512x512.png, keeping existing classes (h-12 w-auto object-contain) and layout unchanged."
-        },
-        {
-          "path": "frontend/src/components/SiteFooter.tsx",
-          "operation": "modify",
-          "description": "Update the footer logo <img> src to use /assets/generated/patil-logo-3d-new7.dim_512x512.png instead of /assets/generated/patil-logo-3d-new5.dim_512x512.png, keeping existing classes (h-12 w-auto object-contain) and layout unchanged."
-        }
-      ]
-    }
-  ]
+  "title": "Retry build/deployment (no new feature changes requested)",
+  "requirements": []
 }

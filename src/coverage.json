@@ -1,47 +1,21 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-13T14:33:31.431Z",
+  "generatedAt": "2026-02-14T12:37:08.164Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 2,
-    "implemented": 2,
-    "items": [
-      {
-        "id": "REQ-18",
-        "summary": "Generate a new square logo image from the latest uploaded PATIL Construction 3D logo wall mockup (use \"patil construction 3d jpeg new-7.jpg\" as the source): tightly crop to the logo mark, remove the wall/background, and export a transparent PNG at 512x512 into frontend/public/assets/generated.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/public/assets/generated/patil-logo-3d-new7.dim_512x512.png"
-        ],
-        "matchedFiles": [
-          "frontend/public/assets/generated/patil-logo-3d-new7.dim_512x512.png"
-        ]
-      },
-      {
-        "id": "REQ-19",
-        "summary": "Update the website header and footer to use the newly generated logo asset \"/assets/generated/patil-logo-3d-new7.dim_512x512.png\" anywhere the current logo is rendered (replacing the current \"/assets/generated/patil-logo-3d-new5.dim_512x512.png\").",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/SiteHeader.tsx",
-          "frontend/src/components/SiteFooter.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/SiteHeader.tsx",
-          "frontend/src/components/SiteFooter.tsx"
-        ]
-      }
-    ]
+    "total": 0,
+    "implemented": 0,
+    "items": []
   },
   "changedFiles": [
     "build-request.json",
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/public/assets/generated/patil-logo-3d-new7.dim_512x512.png",
     "frontend/src/components/SiteFooter.tsx",
     "frontend/src/components/SiteHeader.tsx",
     "project_state.json",

@@ -28,7 +28,7 @@ export function SiteFooter() {
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               <img
-                src="/assets/generated/patil-logo-3d-new7.dim_512x512.png"
+                src="/assets/patil constructio new final.png"
                 alt="PATIL Construction Logo"
                 className="h-12 w-auto object-contain"
               />
