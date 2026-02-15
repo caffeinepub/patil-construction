@@ -1,10 +1,10 @@
 # Specification
 
 ## Summary
-**Goal:** Simplify the Contact section’s Business Hours display to “Always Open” and ensure the logo is clearly visible in both the header and footer without changing the logo asset.
+**Goal:** Use the uploaded PATIL CONSTRUCTION logo as the site logo so it appears correctly in the header and footer.
 
 **Planned changes:**
-- Update the Contact section Business Hours card UI to remove the day-by-day schedule and display only “Always Open” (English text).
-- Adjust header and footer logo presentation (e.g., sizing, padding, contrasting background, subtle shadow) to improve visibility in light/dark themes while keeping the logo loaded from `/assets/generated/patil-logo.dim_512x512.png` and preserving its aspect ratio.
+- Extract/crop the PATIL CONSTRUCTION mark from the uploaded screenshot and export it as the site logo image at `frontend/public/assets/generated/patil-logo.dim_512x512.png` (transparent background, clear/legible, balanced padding).
+- Ensure the existing `LogoMark` usage in the header and footer renders the updated logo asset without broken links.
 
-**User-visible outcome:** The Contact section shows Business Hours as “Always Open,” and the site logo is clearly visible and readable in both the header and footer.
+**User-visible outcome:** The site header and footer display the uploaded PATIL CONSTRUCTION logo clearly on both light and dark backgrounds.

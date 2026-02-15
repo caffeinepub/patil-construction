@@ -1,60 +1,40 @@
 {
   "kind": "build_request",
-  "title": "Show Business Hours as Always Open and Improve Logo Visibility",
+  "title": "Use uploaded PATIL Construction logo across the site",
   "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "Update the Contact section Business Hours UI to display a single status of “Always Open” instead of the current day-by-day schedule.",
+      "text": "Process the uploaded image (Screenshot_20260214-164840-1.png) into the site’s logo asset at /assets/generated/patil-logo.dim_512x512.png so the header and footer display the uploaded logo via the existing LogoMark component.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "recent-messages"
+          "msg-3"
         ],
         "quotes": [
-          "Please add Business hours always open",
-          "Yes"
+          "Please add logo"
         ]
       },
       "acceptanceCriteria": [
-        "On the Contact section, the Business Hours card no longer shows Monday–Sunday rows.",
-        "The Business Hours card shows the text “Always Open” as the only hours/status line.",
-        "All user-facing text is in English."
-      ]
-    },
-    {
-      "id": "REQ-2",
-      "text": "Make the site logo clearly visible in both the header and footer by adjusting its presentation (e.g., sizing and/or adding a contrasting background, padding, and/or subtle shadow) while keeping the same logo asset path.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "recent-messages"
-        ],
-        "quotes": [
-          "And logo is clear visible",
-          "Make sure logo is not clear visible so make it perfect visible"
-        ]
-      },
-      "acceptanceCriteria": [
-        "The logo remains loaded from /assets/generated/patil-logo.dim_512x512.png in both header and footer.",
-        "In both header and footer, the logo has sufficient contrast against the surrounding background (light and dark themes) and is visually clear (not washed out or blending into the background).",
-        "Logo maintains aspect ratio and is not distorted."
+        "A generated static image exists at frontend/public/assets/generated/patil-logo.dim_512x512.png.",
+        "The SiteHeader and SiteFooter logo renders using the updated asset without any broken image links.",
+        "The logo remains legible/clear on both light and dark backgrounds (no unintended cropping or excessive empty padding around the mark)."
       ]
     }
   ],
   "constraints": [
-    "Do not edit files under frontend/src/components/ui (shadcn components); compose them instead.",
-    "Do not edit immutable paths listed in SYSTEM_CONTEXT (e.g., frontend/src/main.tsx and Internet Identity hooks).",
-    "Backend remains single-actor; no backend changes are required for these UI-only updates."
+    "Do not edit files under frontend/src/components/ui (read-only).",
+    "Backend is not required for this change (keep backend/main.mo unchanged)."
   ],
   "nonGoals": [
-    "Adding a backend-powered contact form submission or storing contact messages.",
-    "Changing the logo file itself or generating a new logo image (unless explicitly requested later).",
-    "Adding new sections/pages beyond updating Business Hours text and logo visibility."
+    "Changing business hours behavior/content.",
+    "Adding authentication or any new backend features."
   ],
   "imageRequirements": {
     "required": [],
-    "edits": []
+    "edits": [
+      "Extract/crop the PATIL CONSTRUCTION logo from the screenshot and export as a clean logo image with a transparent background and tight, balanced padding (Screenshot_20260214-164840-1.png > patil-logo.dim_512x512.png)"
+    ]
   },
   "userProfileUpdate": {
     "goalsToAdd": [],

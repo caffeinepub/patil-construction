@@ -5,20 +5,13 @@
   "architectural_notes": [],
   "known_issues": [],
   "isFixRequest": false,
+  "imageRequirements": "## Edit Images\n- Extract/crop the PATIL CONSTRUCTION logo from the screenshot and export as a clean logo image with a transparent background and tight, balanced padding (Screenshot_20260214-164840-1.png > patil-logo.dim_512x512.png)",
   "existing_features": [
     {
-      "id": "feature-update-the-contact-section-business-hours-ui-to-display-a-single-status-of-always-open-instead-of-the-current-day-by-day-schedule",
-      "title": "Update the Contact section Business Hours UI to display a single status of “Always Open” instead of the current day-by-day schedule.",
+      "id": "feature-process-the-uploaded-image-screenshot-20260214-164840-1-png-into-the-site-s-logo-asset-at-assets-generated-patil-logo-dim-512x512-png-so-the-header-and-footer-display-the-uploaded-logo-via-the-existing-logomark-component",
+      "title": "Process the uploaded image (Screenshot_20260214-164840-1.png) into the site’s logo asset at /assets/generated/patil-logo.dim_512x512.png so the header and footer display the uploaded logo via the existing LogoMark component.",
       "reqIds": [
         "REQ-1"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-make-the-site-logo-clearly-visible-in-both-the-header-and-footer-by-adjusting-its-presentation-e-g-sizing-and-or-adding-a-contrasting-background-padding-and-or-subtle-shadow-while-keeping-the-same-logo-asset-path",
-      "title": "Make the site logo clearly visible in both the header and footer by adjusting its presentation (e.g., sizing and/or adding a contrasting background, padding, and/or subtle shadow) while keeping the same logo asset path.",
-      "reqIds": [
-        "REQ-2"
       ],
       "version": 1
     }
@@ -26,18 +19,13 @@
   "new_feature_requests": [
     {
       "id": "AR-1",
-      "summary": "Update Business Hours to display \"Always Open\" instead of a daily schedule.",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-2",
-      "summary": "Adjust the site logo so it is clearly visible (improve clarity/visibility).",
+      "summary": "Display uploaded business logo prominently on the site (clarify whether it should replace the current logo).",
       "reqIds": [],
       "status": "pending"
     }
   ],
-  "projectName": "Show Business Hours as Always Open and Improve Logo Visibility",
+  "gameProjectType": "none",
+  "projectName": "Use uploaded PATIL Construction logo across the site",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }

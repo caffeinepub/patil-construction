@@ -1,47 +1,26 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Always-Open Business Hours and Higher-Contrast Logo in Header/Footer",
+  "title": "Apply uploaded PATIL Construction logo across header and footer",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Replace the Business Hours day-by-day schedule in the Contact section with a single “Always Open” status line.",
+      "summary": "Generate a clean transparent logo asset from the uploaded screenshot and ensure SiteHeader/SiteFooter render it via the existing LogoMark component.",
       "acceptanceCriteria": [
-        "On the Contact section, the Business Hours card no longer shows Monday–Sunday rows.",
-        "The Business Hours card shows the text “Always Open” as the only hours/status line.",
-        "All user-facing text is in English."
+        "A generated static image exists at frontend/public/assets/generated/patil-logo.dim_512x512.png.",
+        "The SiteHeader and SiteFooter logo renders using the updated asset without any broken image links.",
+        "The logo remains legible/clear on both light and dark backgrounds (no unintended cropping or excessive empty padding around the mark)."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/Sections/ContactSection.tsx",
-          "operation": "modify",
-          "description": "Update the Business Hours card UI to remove the current multi-row schedule and display a single, user-facing English line that reads “Always Open” as the only hours/status line."
-        }
-      ]
-    },
-    {
-      "id": "REQ-2",
-      "summary": "Improve logo visibility in header and footer using styling adjustments while keeping the same logo asset path and preserving aspect ratio.",
-      "acceptanceCriteria": [
-        "The logo remains loaded from /assets/generated/patil-logo.dim_512x512.png in both header and footer.",
-        "In both header and footer, the logo has sufficient contrast against the surrounding background (light and dark themes) and is visually clear (not washed out or blending into the background).",
-        "Logo maintains aspect ratio and is not distorted."
-      ],
-      "file_operations": [
+          "path": "frontend/public/assets/generated/patil-logo.dim_512x512.png",
+          "operation": "create",
+          "description": "Create/replace the generated logo by extracting/cropping the PATIL CONSTRUCTION mark from Screenshot_20260214-164840-1.png and exporting as a 512x512 PNG with transparent background and tight, balanced padding (final file must be exactly frontend/public/assets/generated/patil-logo.dim_512x512.png)."
+        },
         {
           "path": "frontend/src/components/LogoMark.tsx",
-          "operation": "create",
-          "description": "Create a small reusable LogoMark component that renders the existing logo image from /assets/generated/patil-logo.dim_512x512.png with consistent sizing (object-contain / w-auto) and a contrast-enhancing wrapper (e.g., background + padding + subtle ring/shadow) designed to work in both light and dark themes."
-        },
-        {
-          "path": "frontend/src/components/SiteHeader.tsx",
           "operation": "modify",
-          "description": "Replace the direct <img> logo usage with the new LogoMark component so the header logo gains improved contrast/visibility while keeping the same asset path and preserving aspect ratio."
-        },
-        {
-          "path": "frontend/src/components/SiteFooter.tsx",
-          "operation": "modify",
-          "description": "Replace the direct <img> logo usage with the new LogoMark component so the footer logo gains improved contrast/visibility while keeping the same asset path and preserving aspect ratio."
+          "description": "Confirm LogoMark points to /assets/generated/patil-logo.dim_512x512.png and, if needed, adjust only LogoMark presentation (e.g., container sizing/padding/contrast-safe styling) to keep the mark legible on both light and dark backgrounds without cropping."
         }
       ]
     }
