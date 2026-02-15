@@ -1,26 +1,37 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-14T12:47:35.233Z",
+  "generatedAt": "2026-02-15T00:20:11.537Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 1,
-    "implemented": 1,
+    "total": 2,
+    "implemented": 2,
     "items": [
       {
-        "id": "REQ-23",
-        "summary": "Build and publish (deploy) the current PATIL Construction website version to production, ensuring the deployment completes successfully without build-time errors (TypeScript compile errors, missing imports, missing static assets, or invalid paths).",
+        "id": "REQ-1",
+        "summary": "Update the Contact section Business Hours UI to display a single status of “Always Open” instead of the current day-by-day schedule.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/SiteHeader.tsx",
-          "frontend/src/components/SiteFooter.tsx",
-          "frontend/public/assets/generated/patil-hero.dim_1920x800.png",
-          "frontend/public/assets/generated/patil-logo.dim_512x512.png"
+          "frontend/src/components/Sections/ContactSection.tsx"
         ],
         "matchedFiles": [
+          "frontend/src/components/Sections/ContactSection.tsx"
+        ]
+      },
+      {
+        "id": "REQ-2",
+        "summary": "Make the site logo clearly visible in both the header and footer by adjusting its presentation (e.g., sizing and/or adding a contrasting background, padding, and/or subtle shadow) while keeping the same logo asset path.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/LogoMark.tsx",
+          "frontend/src/components/SiteHeader.tsx",
+          "frontend/src/components/SiteFooter.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/LogoMark.tsx",
           "frontend/src/components/SiteHeader.tsx",
           "frontend/src/components/SiteFooter.tsx"
         ]
@@ -32,6 +43,8 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
+    "frontend/src/components/LogoMark.tsx",
+    "frontend/src/components/Sections/ContactSection.tsx",
     "frontend/src/components/SiteFooter.tsx",
     "frontend/src/components/SiteHeader.tsx",
     "project_state.json",

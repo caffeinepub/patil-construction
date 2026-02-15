@@ -1,37 +1,47 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Publish PATIL Construction website (frontend build/deploy readiness)",
+  "title": "Always-Open Business Hours and Higher-Contrast Logo in Header/Footer",
   "requirements": [
     {
-      "id": "REQ-23",
-      "summary": "Ensure the current PATIL Construction site builds cleanly and all referenced static assets resolve in production.",
+      "id": "REQ-1",
+      "summary": "Replace the Business Hours day-by-day schedule in the Contact section with a single “Always Open” status line.",
       "acceptanceCriteria": [
-        "A production deployment is completed successfully for the current codebase.",
-        "The build completes with no TypeScript compilation errors.",
-        "All referenced static assets resolve at runtime (no 404s for /assets/generated/*).",
-        "The deployed site loads and renders the main sections (Header, Hero, Services, About, Contact, Footer) without runtime errors."
+        "On the Contact section, the Business Hours card no longer shows Monday–Sunday rows.",
+        "The Business Hours card shows the text “Always Open” as the only hours/status line.",
+        "All user-facing text is in English."
       ],
       "file_operations": [
         {
+          "path": "frontend/src/components/Sections/ContactSection.tsx",
+          "operation": "modify",
+          "description": "Update the Business Hours card UI to remove the current multi-row schedule and display a single, user-facing English line that reads “Always Open” as the only hours/status line."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Improve logo visibility in header and footer using styling adjustments while keeping the same logo asset path and preserving aspect ratio.",
+      "acceptanceCriteria": [
+        "The logo remains loaded from /assets/generated/patil-logo.dim_512x512.png in both header and footer.",
+        "In both header and footer, the logo has sufficient contrast against the surrounding background (light and dark themes) and is visually clear (not washed out or blending into the background).",
+        "Logo maintains aspect ratio and is not distorted."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/LogoMark.tsx",
+          "operation": "create",
+          "description": "Create a small reusable LogoMark component that renders the existing logo image from /assets/generated/patil-logo.dim_512x512.png with consistent sizing (object-contain / w-auto) and a contrast-enhancing wrapper (e.g., background + padding + subtle ring/shadow) designed to work in both light and dark themes."
+        },
+        {
           "path": "frontend/src/components/SiteHeader.tsx",
           "operation": "modify",
-          "description": "Update the header logo image reference to use a stable generated asset path (served from the public assets folder) so production builds don’t fail or 404 due to missing/space-containing filenames. Verify the component's usage instructions before implementing."
+          "description": "Replace the direct <img> logo usage with the new LogoMark component so the header logo gains improved contrast/visibility while keeping the same asset path and preserving aspect ratio."
         },
         {
           "path": "frontend/src/components/SiteFooter.tsx",
           "operation": "modify",
-          "description": "Update the footer logo image reference to use the same stable generated asset path as the header to prevent runtime 404s in production. Verify the component's usage instructions before implementing."
-        },
-        {
-          "path": "frontend/public/assets/generated/patil-hero.dim_1920x800.png",
-          "operation": "create",
-          "description": "Add the generated hero image as a static public asset at this exact path so the Hero section’s /assets/generated/* reference resolves in production (copy from the provided asset: generated/patil-hero.dim_1920x800.png)."
-        },
-        {
-          "path": "frontend/public/assets/generated/patil-logo.dim_512x512.png",
-          "operation": "create",
-          "description": "Add the generated logo image as a static public asset at this exact path so Header/Footer logo references resolve in production (copy from the provided asset: generated/patil-logo.dim_512x512.png)."
+          "description": "Replace the direct <img> logo usage with the new LogoMark component so the footer logo gains improved contrast/visibility while keeping the same asset path and preserving aspect ratio."
         }
       ]
     }

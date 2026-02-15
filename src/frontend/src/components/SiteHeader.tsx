@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { LogoMark } from '@/components/LogoMark';
 
 export function SiteHeader() {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,11 +26,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-3">
-          <img
-            src="/assets/generated/patil-logo.dim_512x512.png"
-            alt="PATIL Construction Logo"
-            className="h-12 w-auto object-contain"
-          />
+          <LogoMark />
           <div className="flex flex-col">
             <span className="text-lg font-bold tracking-tight text-foreground">
               PATIL Construction

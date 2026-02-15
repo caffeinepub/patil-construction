@@ -4,7 +4,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Alert, AlertDescription } from '@/components/ui/alert';
-import { CheckCircle2, Mail, Phone, MapPin } from 'lucide-react';
+import { CheckCircle2, Mail, Phone, MapPin, Clock } from 'lucide-react';
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -48,17 +48,17 @@ export function ContactSection() {
     {
       icon: Phone,
       label: 'Phone',
-      value: '+91 XXX XXX XXXX',
+      value: '9844629571',
     },
     {
       icon: Mail,
       label: 'Email',
-      value: 'info@patilconstruction.com',
+      value: 'mahaveercivil@gmail.com',
     },
     {
       icon: MapPin,
       label: 'Location',
-      value: 'Serving across the region',
+      value: 'Athani, Raybag, Chinchali',
     },
   ];
 
@@ -97,20 +97,14 @@ export function ContactSection() {
             </div>
 
             <div className="p-6 rounded-lg bg-card border-2 border-border">
-              <h4 className="font-semibold text-lg mb-3">Business Hours</h4>
-              <div className="space-y-2 text-sm text-muted-foreground">
-                <div className="flex justify-between">
-                  <span>Monday - Friday</span>
-                  <span className="font-medium text-foreground">9:00 AM - 6:00 PM</span>
+              <div className="flex items-center gap-3 mb-3">
+                <div className="p-2 rounded-lg bg-primary/10 text-primary">
+                  <Clock className="h-5 w-5" />
                 </div>
-                <div className="flex justify-between">
-                  <span>Saturday</span>
-                  <span className="font-medium text-foreground">9:00 AM - 2:00 PM</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Sunday</span>
-                  <span className="font-medium text-foreground">Closed</span>
-                </div>
+                <h4 className="font-semibold text-lg">Business Hours</h4>
+              </div>
+              <div className="text-base font-medium text-foreground">
+                Always Open
               </div>
             </div>
           </div>

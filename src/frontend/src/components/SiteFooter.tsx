@@ -1,5 +1,6 @@
 import { Heart } from 'lucide-react';
 import { siteCopy } from '@/content/siteCopy';
+import { LogoMark } from '@/components/LogoMark';
 
 export function SiteFooter() {
   const currentYear = new Date().getFullYear();
@@ -27,11 +28,7 @@ export function SiteFooter() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <img
-                src="/assets/generated/patil-logo.dim_512x512.png"
-                alt="PATIL Construction Logo"
-                className="h-12 w-auto object-contain"
-              />
+              <LogoMark />
               <div>
                 <div className="font-bold text-lg">PATIL Construction</div>
                 <div className="text-sm text-muted-foreground">Your vision, our precision</div>

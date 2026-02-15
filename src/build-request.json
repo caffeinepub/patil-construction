@@ -1,39 +1,69 @@
 {
   "kind": "build_request",
-  "title": "Publish current version (build and deploy)",
+  "title": "Show Business Hours as Always Open and Improve Logo Visibility",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-23",
-      "text": "Build and publish (deploy) the current PATIL Construction website version to production, ensuring the deployment completes successfully without build-time errors (TypeScript compile errors, missing imports, missing static assets, or invalid paths).",
-      "target": "both",
+      "id": "REQ-1",
+      "text": "Update the Contact section Business Hours UI to display a single status of “Always Open” instead of the current day-by-day schedule.",
+      "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-6"
+          "recent-messages"
         ],
         "quotes": [
-          "Publish"
+          "Please add Business hours always open",
+          "Yes"
         ]
       },
       "acceptanceCriteria": [
-        "A production deployment is completed successfully for the current codebase.",
-        "The build completes with no TypeScript compilation errors.",
-        "All referenced static assets resolve at runtime (no 404s for /assets/generated/*).",
-        "The deployed site loads and renders the main sections (Header, Hero, Services, About, Contact, Footer) without runtime errors."
+        "On the Contact section, the Business Hours card no longer shows Monday–Sunday rows.",
+        "The Business Hours card shows the text “Always Open” as the only hours/status line.",
+        "All user-facing text is in English."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Make the site logo clearly visible in both the header and footer by adjusting its presentation (e.g., sizing and/or adding a contrasting background, padding, and/or subtle shadow) while keeping the same logo asset path.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "recent-messages"
+        ],
+        "quotes": [
+          "And logo is clear visible",
+          "Make sure logo is not clear visible so make it perfect visible"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The logo remains loaded from /assets/generated/patil-logo.dim_512x512.png in both header and footer.",
+        "In both header and footer, the logo has sufficient contrast against the surrounding background (light and dark themes) and is visually clear (not washed out or blending into the background).",
+        "Logo maintains aspect ratio and is not distorted."
       ]
     }
   ],
   "constraints": [
-    "Do not edit files under frontend/immutablePaths (frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui).",
-    "Backend must remain a single Motoko actor (all logic in backend/main.mo); only add backend migrations if an upgrade requires state changes."
+    "Do not edit files under frontend/src/components/ui (shadcn components); compose them instead.",
+    "Do not edit immutable paths listed in SYSTEM_CONTEXT (e.g., frontend/src/main.tsx and Internet Identity hooks).",
+    "Backend remains single-actor; no backend changes are required for these UI-only updates."
   ],
   "nonGoals": [
-    "No new pages, sections, or content changes beyond what is required to successfully build and publish.",
-    "No redesign or visual changes unless needed to resolve build/runtime errors.",
-    "No new backend features or persistence changes unless required to fix deployment blockers."
+    "Adding a backend-powered contact form submission or storing contact messages.",
+    "Changing the logo file itself or generating a new logo image (unless explicitly requested later).",
+    "Adding new sections/pages beyond updating Business Hours text and logo visibility."
   ],
   "imageRequirements": {
     "required": [],
     "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
   }
 }

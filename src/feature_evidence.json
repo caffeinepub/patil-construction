@@ -2,9 +2,28 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-build-and-publish-deploy-the-current-patil-construction-website-version-to-production-ensuring-the-deployment-completes-successfully-without-build-time-errors-typescript-compile-errors-missing-imports-missing-static-assets-or-invalid-paths",
-      "featureTitle": "Build and publish (deploy) the current PATIL Construction website version to production, ensuring the deployment completes successfully without build-time errors (TypeScript compile errors, missing imports, missing static assets, or invalid paths).",
+      "featureId": "feature-update-the-contact-section-business-hours-ui-to-display-a-single-status-of-always-open-instead-of-the-current-day-by-day-schedule",
+      "featureTitle": "Update the Contact section Business Hours UI to display a single status of “Always Open” instead of the current day-by-day schedule.",
       "files": [
+        "frontend/src/components/Sections/ContactSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-make-the-site-logo-clearly-visible-in-both-the-header-and-footer-by-adjusting-its-presentation-e-g-sizing-and-or-adding-a-contrasting-background-padding-and-or-subtle-shadow-while-keeping-the-same-logo-asset-path",
+      "featureTitle": "Make the site logo clearly visible in both the header and footer by adjusting its presentation (e.g., sizing and/or adding a contrasting background, padding, and/or subtle shadow) while keeping the same logo asset path.",
+      "files": [
+        "frontend/src/components/LogoMark.tsx",
         "frontend/src/components/SiteFooter.tsx",
         "frontend/src/components/SiteHeader.tsx"
       ],
@@ -16,7 +35,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-23"
+        "REQ-2"
       ],
       "confidence": "high"
     }
